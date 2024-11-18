@@ -665,6 +665,7 @@ progress {
   .container, .container-sm, .container-md, .container-lg, .container-xl, .container-xxl {
     max-width: 1320px;
   }
+  
 }
 
 .row {
@@ -6451,6 +6452,7 @@ fieldset:disabled .btn {
   .modal-sm {
     max-width: 300px;
   }
+
 }
 
 @media (min-width: 992px) {
@@ -19497,8 +19499,9 @@ iframe {
 
 @media (min-width: 1400px) {
   .hero-title {
-    font-size: 5.20158rem;
+    font-size: 4.8rem;
   }
+ 
 }
 
 .hero-title:before {
@@ -19536,17 +19539,24 @@ iframe {
 }
 
 .hero-img {
-  width: 105%;
-  margin-left: -5rem;
+  width: 100%;
+  margin: auto;
 }
 
 @media (min-width: 768px) and (max-width: 991.98px) {
   .hero-img {
-    width: 135%;
+    width: 115%;
     margin-left: -4rem;
+    margin: auto;
   }
 }
-
+@media (min-width: 1400px) {
+  .hero-img {
+    width: 75%;
+  
+    margin: auto;
+  }
+}
 .card {
   border: none;
 }

@@ -4330,6 +4330,7 @@ fieldset:disabled .btn {
     right: 0 ;
     left: auto ;
   }
+  
 }
 
 @media (min-width: 992px) {
@@ -5437,6 +5438,10 @@ fieldset:disabled .btn {
   .card-group > .card:not(:first-child) .card-img-bottom,
   .card-group > .card:not(:first-child) .card-footer {
     border-bottom-right-radius: 0;
+  }
+  .hero-img{
+    width: 65%;
+    margin: auto;
   }
 }
 
