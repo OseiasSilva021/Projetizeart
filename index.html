@@ -382,7 +382,7 @@
       <div class="row justify-content-center">
         <div class="col-lg-8 col-md-10">
           <h2 class="text-secondary lh-1-7 mb-7" data-aos="fade-right">Digite seu e-mail e fique por dentro das novidades, atualizações e ofertas exclusivas da Projetizeart!</h2>
-          <form class="row g-3 align-items-center w-lg-75 mx-auto">
+          <form class="row g-3 align-items-center w-lg-75 mx-auto" name="contact" method="POST" netlify>
             <div class="col-sm">
               <div class="input-group-icon" data-aos="fade-up"
               data-aos-delay="100">
@@ -391,7 +391,7 @@
             </div>
             <div class="col-sm-auto" data-aos="fade-left"
             data-aos-delay="200">
-              <button class="btn btn-danger orange-gradient-btn fs--1">Inscreva-se!</button>
+              <button class="btn btn-danger orange-gradient-btn fs--1" type="submit" >Inscreva-se!</button>
             </div>
           </form>
         </div>
@@ -462,6 +462,26 @@
 <!-- ===============================================-->
 <!--    JavaScripts-->
 <!-- ===============================================-->
+
+<script>
+  const handleSubmit = event => {
+  event.preventDefault();
+
+  const myForm = event.target;
+  const formData = new FormData(myForm);
+
+  fetch("/", {
+    method: "POST",
+    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    body: new URLSearchParams(formData).toString()
+  })
+    .then(() => console.log("Form successfully submitted"))
+    .catch(error => alert(error));
+};
+
+document.querySelector("form").addEventListener("submit", handleSubmit);
+
+</script>
 <script src="vendors/@popperjs/popper.min.js"></script>
 <script src="vendors/bootstrap/bootstrap.min.js"></script>
 <script src="vendors/is/is.min.js"></script>
@@ -491,7 +511,6 @@ window.addEventListener('resize', alterarImagem);
 <script>
   AOS.init();
 
-  AOS.init();
 
 // You can also pass an optional settings object
 // below listed default settings
