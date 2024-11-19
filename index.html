@@ -386,7 +386,10 @@
             <div class="col-sm">
               <div class="input-group-icon" data-aos="fade-up"
               data-aos-delay="100">
-                <input class="form-control form-little-squirrel-control" type="email" placeholder="Enter email " aria-label="email" /><img class="input-box-icon" src="assets/img/cta/mail.svg" width="17" alt="mail"  />
+              
+<input class="form-control form-little-squirrel-control" type="email" placeholder="Enter email " aria-label="email" name="email"/>
+                
+                <img class="input-box-icon" src="assets/img/cta/mail.svg" width="17" alt="mail"  />
               </div>
             </div>
             <div class="col-sm-auto" data-aos="fade-left"
@@ -463,25 +466,7 @@
 <!--    JavaScripts-->
 <!-- ===============================================-->
 
-<script>
-  const handleSubmit = event => {
-  event.preventDefault();
 
-  const myForm = event.target;
-  const formData = new FormData(myForm);
-
-  fetch("/", {
-    method: "POST",
-    headers: { "Content-Type": "application/x-www-form-urlencoded" },
-    body: new URLSearchParams(formData).toString()
-  })
-    .then(() => console.log("Form successfully submitted"))
-    .catch(error => alert(error));
-};
-
-document.querySelector("form").addEventListener("submit", handleSubmit);
-
-</script>
 <script src="vendors/@popperjs/popper.min.js"></script>
 <script src="vendors/bootstrap/bootstrap.min.js"></script>
 <script src="vendors/is/is.min.js"></script>
