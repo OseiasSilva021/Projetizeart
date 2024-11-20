@@ -2,7 +2,6 @@
 // Verifica se o formulário foi enviado
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Coleta os dados do formulário
-    $nome = $_POST['nome'];
     $email = $_POST['email'];
 
     // Configurações de conexão com o banco de dados
@@ -20,7 +19,7 @@ $password = 'KMrIBprDe4'; // Senha do banco
     }
 
     // Preparar a consulta SQL para inserir os dados no banco de dados
-    $sql = "INSERT INTO usuarios (nome, email) VALUES (?, ?)";
+    $sql = "INSERT INTO usuarios (email) VALUES (?)";
 
     // Preparar a declaração
     $stmt = $conn->prepare($sql);
