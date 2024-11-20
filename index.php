@@ -427,7 +427,7 @@ $password = 'KMrIBprDe4'; // Senha do banco
           <h2 class="text-secondary lh-1-7 mb-7" data-aos="fade-right">Digite seu e-mail e fique por dentro das novidades, atualizações e ofertas exclusivas da Projetizeart!</h2>
 
 
-          <form class="row g-3 align-items-center w-lg-75 mx-auto" action="http://projetizeart.42web.io/processa_email.php" method="POST">
+          <form class="row g-3 align-items-center w-lg-75 mx-auto" action="" method="POST">
             <div class="col-sm">
               <div class="input-group-icon" data-aos="fade-up"
               data-aos-delay="100">
